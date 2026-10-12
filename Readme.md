@@ -2,7 +2,7 @@
 
 A question-answering assistant with a live streaming response, configurable temperature, max tokens, and model selection. It is built from the three primitives that sit underneath almost every LangChain application: **PromptTemplate → LLM → OutputParser**, joined together with the **LCEL pipe operator (`|`)**.
 
-> Level: Beginner · Build time: 2–4 hours · Stack: Python, LangChain (LCEL), Groq API, Streamlit
+ 
 
 ---
 
@@ -25,7 +25,6 @@ project/
 ├── prompt.py          # The prompt template
 ├── requirements.txt   # Python dependencies
 ├── .env               # Your secret API key (NOT committed)
-├── .env.example       # Template for .env
 └── .gitignore         # Keeps .env and venv out of Git
 ```
 
@@ -260,19 +259,8 @@ Get a free Groq API key at [console.groq.com](https://console.groq.com). Restart
 
 ---
 
-## 8. Where to go next
 
-This chain pattern is the base for everything else in LangChain:
-
-- **Memory:** add chat history with `MessagesPlaceholder` so the bot remembers earlier turns.
-- **Structured output:** replace `StrOutputParser` with `PydanticOutputParser` or `.with_structured_output()` to get JSON.
-- **RAG:** insert a retriever before the prompt to ground answers in your documents.
-- **Agents / LangGraph:** give the model tools and let it decide what to call.
-- **Provider swap:** replace `ChatGroq` with `ChatOllama` in `llm.py` to run fully locally.
-
----
-
-## 9. Glossary
+## 8. Glossary
 
 | Term | Meaning |
 |------|---------|
